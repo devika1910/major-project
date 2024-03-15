@@ -1,0 +1,106 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info input[type="text"],
+        .profile-info input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .profile-info label {
+            font-weight: bold;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        .project h2 {
+            margin-bottom: 10px;
+        }
+        .project input[type="text"],
+        .project textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .project input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .project input[type="submit"]:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="profile-info">
+            <h2>Personal Information</h2>
+            <form action="/update_profile" method="post">
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" placeholder="John Doe"><br>
+                <label for="middle_name">Middle Name:</label>
+                <input type="text" id="middle_name" name="middle_name" placeholder="Smith"><br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Johnson"><br>
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="branch" placeholder="Computer Science"><br>
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" placeholder="Artificial Intelligence"><br>
+                <label for="year_of_study">Year of Study:</label>
+                <input type="number" id="year_of_study" name="year_of_study" placeholder="3"><br>
+                <label for="academic_percentage">Academic Percentage:</label>
+                <input type="number" id="academic_percentage" name="academic_percentage" placeholder="85"><br>
+                <input type="submit" value="Update Profile">
+            </form>
+        </div>
+        <div class="project">
+            <h2>Projects</h2>
+            <form action="/add_project" method="post">
+                <label for="project_title">Project Title:</label>
+                <input type="text" id="project_title" name="project_title" placeholder="Project Title"><br>
+                <label for="project_abstract">Abstract:</label>
+                <textarea id="project_abstract" name="project_abstract" placeholder="Project Abstract"></textarea><br>
+                <label for="project_introduction">Introduction:</label>
+                <textarea id="project_introduction" name="project_introduction" placeholder="Project Introduction"></textarea><br>
+                <label for="problem_statement">Problem Statement:</label>
+                <textarea id="problem_statement" name="problem_statement" placeholder="Problem Statement"></textarea><br>
+                <label for="problem_solution">Problem Solution:</label>
+                <textarea id="problem_solution" name="problem_solution" placeholder="Problem Solution"></textarea><br>
+                <label for="summary_conclusion">Summary/Conclusion:</label>
+                <textarea id="summary_conclusion" name="summary_conclusion" placeholder="Summary/Conclusion"></textarea><br>
+                <input type="submit" value="Add Project">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
